@@ -1,4 +1,5 @@
 
+
 import pylab as plt
 import numpy as np
 
@@ -21,8 +22,8 @@ zeo_y = []
 
 for i in fig_x:
     fig_y.append(f(i))
-p1, = ax.plot(fig_x, fig_y, 'b')
-p2, = ax.plot([-10.5, 10.5], [0, 0], 'k')
+ax.plot(fig_x, fig_y, 'b')
+ax.plot([-10.5, 10.5], [0, 0], 'k')
 
 
 root = 0
@@ -38,8 +39,9 @@ while (b - a > error_threshold):
 root = b
 print(root)
 
-p3, = ax.plot(fid_x, fid_y, 'ro')
-p4, = ax.plot(fid_x, zeo_y, 'bo')
+ax.plot(fid_x, fid_y, 'ro')
+ax.plot(fid_x, zeo_y, 'bo')
 
+plt.savefig('/Users/chenthungfang/desktop/figure.png')
 plt.show()
 
