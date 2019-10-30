@@ -42,6 +42,6 @@ print(root)
 ax.plot(fid_x, fid_y, 'ro')
 ax.plot(fid_x, zeo_y, 'bo')
 
-plt.savefig('/Users/chenthungfang/desktop/figure.png')
+plt.savefig('figure.png')
 plt.show()
 
