@@ -1,7 +1,7 @@
 from sklearn import preprocessing
 import numpy as np
 
-pre_dir = "/Users/chenthungfang/Desktop/Sound-Data-Extract/data/"
+pre_dir = "./data/NewData VOL2/"
 ext = ".txt"
 
 def Normalize(filename):
@@ -23,10 +23,20 @@ def Normalize(filename):
 
 def Run(filenames):
 	for f in filenames:
-		Xn, Yn = Normalize(pre_dir+f+ext)
+		print("Processing on '" + f + "'")
 
-		with open(pre_dir + f + "_N" + ext, 'w', encoding='utf-8') as fout:
+		Xn, Yn = Normalize(pre_dir + f + ext)
+
+		with open(pre_dir + "N_" + f + ext, 'w', encoding = 'utf-8') as fout:
 			for i in range(len(Xn)):
-				fout.write(str(Xn[i])+","+str(Yn[i])+"\n")
+				fout.write(str(Xn[i]) + "," + str(Yn[i]) + "\n")
 
-Run(["dual_90l_pin0", "dual_90r_pin0"])
+
+lis = list()
+for i in range(-90, 91, 30):
+	ss = str(i) + 'l'
+	lis.append(str(i) + "l")
+
+# print(lis)
+
+Run(lis)
