@@ -38,5 +38,5 @@ for i in range(-90, 91, 30):
 	lis.append(str(i) + "l")
 
 # print(lis)
-
-Run(lis)
+Run(['-90l'])
+# Run(lis)
