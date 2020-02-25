@@ -18,7 +18,7 @@ num = 0
 yy1 = list()
 yy2 = list()
 
-data = open(pre_dir + 'N30l' + ext)
+data = open(pre_dir + 'N_30l' + ext)
 for i in data:
 	now = i.split(',')
 	num = num + 1

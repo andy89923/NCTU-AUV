@@ -6,8 +6,8 @@
 
 #include "kalman.hpp"
 
-const char* in_filename = "./data/measurements_30l_N.txt";
-const char* out_filename = "./data/N_30l_kalman_output.txt";
+const char* in_filename = "./data/NewData VOL2/M/90l.txt";
+const char* out_filename = "./data/N_90l_kalman.txt";
 
 int main(int argc, char* argv[]) {
 
