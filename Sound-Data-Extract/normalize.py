@@ -29,7 +29,7 @@ def Run(filenames):
 
 		with open(pre_dir + "N_" + f + ext, 'w', encoding = 'utf-8') as fout:
 			for i in range(len(Xn)):
-				fout.write(str(Xn[i]) + "," + str(Yn[i]) + "\n")
+				fout.write(str(Xn[i]) + " " + str(Yn[i]) + "\n")
 
 
 lis = list()
@@ -38,5 +38,5 @@ for i in range(-90, 91, 30):
 	lis.append(str(i) + "l")
 
 # print(lis)
-Run(['-90l'])
-# Run(lis)
+# Run(['-90l'])
+Run(lis)
